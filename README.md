@@ -63,17 +63,20 @@ Heres the most basic implentation of **YCollectionView**. If you'd like to see a
     typealias Section = CollectionViewSection<AnyHashable, AnyHashable>
     
     //basic Section
-    var basicSection = Section(section: BasicSectionData(), items: [BasicDemoData(title: "Test 1"), BasicDemoData(title: "Test 2"), BasicDemoData(title: "Test 3"), BasicDemoData(title: "Test 4")])
+    var basicSection = Section(section: BasicSectionData(), items: [BasicDemoData(title: "Test 1"), 
+    BasicDemoData(title: "Test 2"), BasicDemoData(title: "Test 3"), BasicDemoData(title: "Test 4")])
 ```
 
 • Create Basic NSCollectionLayoutSection for compositional layout
 ```swift
        private func CreateBasicLayoutSection()-> NSCollectionLayoutSection{
         //1
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+        heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         //2
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),heightDimension: .fractionalHeight(0.3))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+        heightDimension: .fractionalHeight(0.3))
         //3
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize,subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
@@ -94,7 +97,8 @@ struct BasicYCollectionViewImplementation: View {
     typealias Section = CollectionViewSection<AnyHashable, AnyHashable>
     
     //basic Section
-    var basicSection = Section(section: BasicSectionData(), items: [BasicDemoData(title: "Test 1"), BasicDemoData(title: "Test 2"), BasicDemoData(title: "Test 3"), BasicDemoData(title: "Test 4")])
+    var basicSection = Section(section: BasicSectionData(), items: [BasicDemoData(title: "Test 1"), BasicDemoData(title: "Test 2"),
+    BasicDemoData(title: "Test 3"), BasicDemoData(title: "Test 4")])
     
     
     struct BasicDemoData: Hashable{
@@ -139,7 +143,8 @@ struct BasicYCollectionViewImplementation: View {
     
     private func CreateBasicLayoutSection()-> NSCollectionLayoutSection{
         //1
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+        heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         //2
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),heightDimension: .fractionalHeight(0.3))
@@ -219,7 +224,7 @@ Spencer Shelton - Stshelton1993@example.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/stshelton](https://github.com/dbader/)
+[https://github.com/stshelton](https://github.com/stshelton)
 
 [swift-image]:https://img.shields.io/badge/swift-4.0-orange.svg
 [swift-url]: https://swift.org/
